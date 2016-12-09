@@ -7,5 +7,5 @@ namespace sebastiangolian\yii2\helpers;
  * @author Sebastian Golian <sebastiangolian@gmail.com>
  */
 class Bootstrap {
-    //put your code here
+
 }
