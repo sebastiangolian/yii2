@@ -8,4 +8,8 @@ namespace sebastiangolian\yii2\helpers;
  */
 class Bootstrap {
 //test
+    public static function test()
+    {
+        return 'test';
+    }
 }
