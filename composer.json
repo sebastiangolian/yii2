@@ -3,6 +3,7 @@
     "description": "A collection of useful components for Yii Framework 2.0",
     "keywords": ["yii2", "extension", "helper", "bootstrap", "components"],
     "homepage": "https://github.com/sebastiangolian/yii2",
+    "version":"1.0.0",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
@@ -23,7 +24,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.0"
+            "dev-master": "1.0-dev"
         }
     }
 }
