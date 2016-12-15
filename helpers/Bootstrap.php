@@ -6,6 +6,7 @@ namespace sebastiangolian\yii2\helpers;
  *
  * @author Sebastian Golian <sebastiangolian@gmail.com>
  */
+
 class Bootstrap {
      /**
      * Generates a bootstrap icon markup.
