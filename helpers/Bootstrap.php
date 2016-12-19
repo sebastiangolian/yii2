@@ -1,29 +1,39 @@
 <?php
 namespace sebastiangolian\yii2\helpers;
 
+use yii\bootstrap\Dropdown;
+use yii\bootstrap\Html;
+
+
+
 /**
  * Description of Bootstrap
  *
  * @author Sebastian Golian <sebastiangolian@gmail.com>
  */
 
-class Bootstrap {
-     /**
-     * Generates a bootstrap icon markup.
-     * echo Html::icon('pencil');
-     * echo Html::icon('trash', ['style' => 'color: red; font-size: 2em']);
-     * echo Html::icon('plus', ['class' => 'text-success']);
-     * @param string $icon the bootstrap icon name without prefix (e.g. 'plus', 'pencil', 'trash')
-     * @param array $options HTML attributes / options for the icon container
-     * @param string $prefix the css class prefix - defaults to 'glyphicon glyphicon-'
-     * @param string $tag the icon container tag (usually 'span' or 'i') - defaults to 'span'
-     *
-     * @return string
+class Bootstrap extends Html
+{
+    /*
+     * Generate dropdown component
+     * Bootstrap::dropdown('Lista ', 
+     * [
+     *      '<li class="dropdown-header">Dropdown header</li>',
+     *      ['label' => 'DropdownA', 'url' => '/'],
+     *      '<li role="separator" class="divider"></li>',
+     *      ['label' => 'DropdownB', 'url' => '#'],
+     * ]);
+     * @param string $content Button label
+     * @param array $items List of menu items in the dropdown
+     * @param string $id
      */
-    public static function icon($icon, $options = [], $prefix = 'glyphicon glyphicon-', $tag = 'span')
+    public static function dropdown($content,$items = [],$id = 'dropdown1')
     {
-        $class = isset($options['class']) ? ' ' . $options['class'] : '';
-        $options['class'] = $prefix . $icon . $class;
-        return static::tag($tag, '', $options);
+        echo static::beginTag('div',['class'=>'dropdown']);
+            echo static::button($content.' '.static::tag('span','',['class'=>'caret']),[
+                'class'=>'btn btn-default dropdown-toggle','type'=>'button','id'=>$id,'data-toggle'=>'dropdown','aria-haspopup'=>'true', 'aria-expanded'=>'true'
+            ]);
+            echo Dropdown::widget(['items'=>$items,'options'=>['aria-labelledby'=>$id]]);
+        echo static::endTag('div');
     }
 }
