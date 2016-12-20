@@ -3,7 +3,7 @@
     "description": "A collection of useful components for Yii Framework 2.0",
     "keywords": ["yii2", "extension", "helper", "bootstrap", "components"],
     "type": "yii2-extension",
-    "license": "BSD-3-Clause",
+    "license": "GNU GENERAL PUBLIC LICENSE",
     "authors": [
         {
             "name": "Sebastian Golian",

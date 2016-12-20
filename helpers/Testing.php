@@ -14,7 +14,7 @@ class Testing
      * @param mixed $var variable by dumping
      * @return string
      */
-    public static function vd($var)
+    public static function vd($var, $name = null)
     {
         echo Html::beginTag('pre',['style'=>'margin-top:50px']);
         if(is_object($var))
@@ -27,10 +27,17 @@ class Testing
             }
         }
         
-        echo Html::tag('p','Variable value:',['style'=>'font-style:italic;margin-top:10px;font-weight:bold;']);
+        if($name == null){
+            $name == '';
+        } else {
+            $name = ' - '.$name;
+        }
+        
+        echo Html::tag('p','Variable value'.$name.':',['style'=>'font-style:italic;margin-top:10px;font-weight:bold;']);
         VarDumper::dump($var);
         echo Html::endTag('pre');
     }
+
     
     /**
      * Add variable value to logger file.
