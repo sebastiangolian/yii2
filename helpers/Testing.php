@@ -5,6 +5,13 @@ use Exception;
 use Yii;
 use yii\helpers\Html;
 use yii\helpers\VarDumper;
+
+/**
+ * @license GNU GENERAL PUBLIC LICENSE
+ * @author Sebastian Golian <sebastiangolian@gmail.com>
+ * 
+ * Helper Testing class to Yii aplikaction development 
+ */
 class Testing
 {
     /**
